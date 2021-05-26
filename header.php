@@ -18,6 +18,11 @@
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css">
+
+  <?php
+    require('functions.php');
+  ?>
+
 </head>
 <body>
   
