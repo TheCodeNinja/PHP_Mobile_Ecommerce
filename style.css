@@ -119,9 +119,21 @@ button, button:focus {
     width: 200px;
   }
 }
-@media (max-width: 414px) {
+@media (max-width: 483px) {
   #special-price .grid .grid-item {
-    width: 364px;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+#banner-ads img {
+  width: 49%;
+}
+
+@media (max-width: 768px) {
+  #banner-ads img {
+    width: 100%;
+    margin-bottom: 12px;
   }
 }
 /* Custom CSS */
