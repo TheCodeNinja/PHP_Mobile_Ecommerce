@@ -136,6 +136,10 @@ button, button:focus {
     margin-bottom: 12px;
   }
 }
+#blogs .card {
+  width: 98%;
+}
+
 /* Custom CSS */
 .dropdown-arrow {
   transform: translate(2px, 2px);
