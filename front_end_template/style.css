@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Thambi+2&family=Raleway&family=Rubik&display=swap");
+/*  global classes  */
+button, button:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* typography classes */
+.font-baloo {
+  font-family: "Baloo Thambi 2", cursive;
+}
+
+.font-rale {
+  font-family: "Raleway", cursive;
+}
+
+.font-rubik {
+  font-family: "Rubik", cursive;
+}
+
+.font-size-12 {
+  font-size: 12px;
+}
+
+.font-size-14 {
+  font-size: 14px;
+}
+
+.font-size-16 {
+  font-size: 16px;
+}
+
+.font-size-20 {
+  font-size: 20px;
+}
+
+/* Color Template  */
+.color-primary {
+  color: #003859;
+}
+
+.color-primary-bg {
+  background: #003859;
+}
+
+.color-second {
+  color: #00A5C4;
+}
+
+.color-second-bg {
+  background: #00A5C4;
+}
+
+.color-yellow {
+  color: #FFD289;
+}
+
+.color-yellow-bg {
+  background: #FFD289;
+}
+
+/* best sales template */
+#best-sales .owl-carousel .product-card .product a {
+  overflow: hidden;
+}
+#best-sales .owl-carousel .product-card .product img {
+  transition: transform 0.5s ease;
+}
+#best-sales .owl-carousel .product-card .product img:hover {
+  transform: scale(1.1);
+}
+#best-sales .owl-carousel .owl-nav button {
+  position: absolute;
+  top: 30%;
+  outline: none;
+}
+#best-sales .owl-carousel .owl-nav button.owl-prev {
+  left: 0;
+}
+#best-sales .owl-carousel .owl-nav button.owl-next {
+  right: 0;
+}
+#best-sales .owl-carousel .owl-nav button.owl-prev span,
+#best-sales .owl-carousel .owl-nav button.owl-next span {
+  font-size: 35px;
+  color: #003859;
+}
+#best-sales .owl-carousel .owl-nav button.owl-prev span {
+  margin-left: -4rem;
+}
+#best-sales .owl-carousel .owl-nav button.owl-next span {
+  margin-right: -4rem;
+}
+
+#special-price .grid .grid-item {
+  width: 250px;
+  margin-left: 0.6rem;
+  margin-right: 0.6rem;
+  margin-top: 1rem;
+}
+
+@media (max-width: 1199px) {
+  #special-price .grid .grid-item {
+    width: 280px;
+  }
+}
+@media (max-width: 992px) {
+  #special-price .grid .grid-item {
+    width: 210px;
+  }
+}
+@media (max-width: 767px) {
+  #special-price .grid .grid-item {
+    width: 230px;
+  }
+}
+@media (max-width: 543px) {
+  #special-price .grid .grid-item {
+    width: 200px;
+  }
+}
+@media (max-width: 483px) {
+  #special-price .grid .grid-item {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+#banner-ads img {
+  width: 49%;
+}
+
+@media (max-width: 768px) {
+  #banner-ads img {
+    width: 100%;
+    margin-bottom: 12px;
+  }
+}
+#blogs .card {
+  width: 98%;
+}
+
+/* Custom CSS */
+.dropdown-arrow {
+  transform: translate(2px, 2px);
+}
+
+/*# sourceMappingURL=style.css.map */
