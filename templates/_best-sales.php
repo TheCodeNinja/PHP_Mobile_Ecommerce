@@ -38,7 +38,13 @@
               <form method="post">
                 <input type="hidden" name="item_id" value="<?php echo $product['item_id'] ?? '1'; ?>">
                 <input type="hidden" name="user_id" value="<?php echo 1; ?>">
-                <button type="submit" name="best_sales_submit" class="btn btn-warning font-size-12">Add to Cart</button>
+                <?php
+                  if (in_array($product['item_id'], $cart->getCartItemIds($products->getData('cart')) ?? [])) {
+                    echo '<button type="submit" disabled class="btn btn-success font-size-12">In the Cart</button>';
+                  } else {
+                    echo '<button type="submit" name="best_sales_submit" class="btn btn-warning font-size-12">Add to Cart</button>';
+                  }
+                ?>
               </form>
             </div>
           </div>

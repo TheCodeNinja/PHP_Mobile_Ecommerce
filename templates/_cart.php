@@ -78,7 +78,7 @@
           </h6>
           <div class="border-top py-4">
             <h5 class="font-baloo font-size-20">
-              Subtotal (<?php echo count($subTotal) ?? 0; ?>  item):&nbsp; 
+              Subtotal (<?php echo isset($subTotal) ? count($subTotal) : 0; ?>  item):&nbsp; 
               <span class="text-danger">
                 $<span id="deal-price"><?php echo isset($subTotal) ? $cart->getSum($subTotal) : 0; ?></span>
               </span> 

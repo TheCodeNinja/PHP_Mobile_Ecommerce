@@ -82,5 +82,15 @@ class Cart {
     }
   }
 
+  // get item_id of shopping cart list
+  public function getCartItemIds($cartArray = null, $key = "item_id") {
+    if ($cartArray != null) {
+      $cartItemIds = array_map(function($cartItem) use($key) { // $key = "item_id"
+        return $cartItem[$key];
+      }, $cartArray);
+      return $cartItemIds;
+    }
+  }
+
 
 }
