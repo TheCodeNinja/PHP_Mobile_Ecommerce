@@ -18,6 +18,14 @@
   $unique_brands = array_unique($brands);
   sort($unique_brands);
   shuffle($products_shuffle);
+
+  // request method post
+  if ($_SERVER['REQUEST_METHOD'] == "POST") {
+    if (isset($_POST['special_price_submit'])) {
+      $cart->addToCart($_POST['user_id'], $_POST['item_id']);
+    }
+  }
+
 ?>
 
 <section id="special-price">
@@ -42,7 +50,11 @@
               </a>
               <div class="text-center">
                 <h6><?php echo $product['item_name'] ?? "Unknown"; ?></h6>
-                <button type="submit" class="btn btn-warning font-size-12">Add to Cart</button>
+                <form method="post">
+                  <input type="hidden" name="item_id" value="<?php echo $product['item_id'] ?? '1'; ?>">
+                  <input type="hidden" name="user_id" value="<?php echo 1; ?>">
+                  <button type="submit" name="special_price_submit" class="btn btn-warning font-size-12">Add to Cart</button>
+                </form>
               </div>
             </div>
           </div>
