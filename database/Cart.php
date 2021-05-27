@@ -34,6 +34,18 @@ class Cart {
     }
   }
 
+  // delete cart item using cart item id
+  public function deleteCartItem($item_id = null, $table = 'cart') {
+    if ($item_id != null) {
+      $result = $this->db->connection->query("DELETE FROM {$table} WHERE item_id={$item_id}");
+      if ($result) {
+        // reload page
+        header("Location:" . $_SERVER['PHP_SELF']);
+      }
+      return $result;
+    }
+  }
+
   /**
    * Request handlers
    */
