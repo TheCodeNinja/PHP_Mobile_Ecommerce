@@ -4,6 +4,10 @@
     if (isset($_POST['delete-cart-submit'])) {
       $deletedrecord = $cart->deleteCartItem($_POST['item_id']);
     }
+
+    if (isset($_POST['cart-submit'])) {
+      $cart->saveForLater($_POST['item_id'], 'cart', 'wishlist');
+    }
   }
 ?>
 
@@ -15,7 +19,7 @@
       <!-- cart items -->
       <div class="col-sm-9">
         <?php
-          foreach ($products->getData('cart') as $cartItem) :
+          foreach ($products->getData('wishlist') as $cartItem) :
             $product = $products->getProduct($cartItem['item_id']);
             // print_r($product);
 
@@ -44,7 +48,10 @@
                 <input type="hidden" value="<?php echo $cartProduct['item_id'] ?? 0; ?>" name="item_id">
                 <button type="submit" name="delete-cart-submit" class="btn font-baloo text-danger pl-0 pr-3 border-right">Delete</button>
               </form>
-              <button type="submit" class="btn font-baloo text-danger">Add to cart</button>
+              <form method="post">
+                <input type="hidden" value="<?php echo $cartProduct['item_id'] ?? 0; ?>" name="item_id">
+                <button type="submit" name="cart-submit" class="btn font-baloo text-danger">Add to cart</button>
+              </form>
             </div>
           </div>
           <div class="col-sm-2 text-right">
